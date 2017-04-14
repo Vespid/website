@@ -25,7 +25,7 @@ SECRET_KEY = 'g1ahciyn!%8(ha#-7nto^2-jo6)u@b=o)uwgix=ndxp1_*^vrm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'vincentmak.pythonanywhere.com']
+ALLOWED_HOSTS = [u'vincentmak.pythonanywhere.com','127.0.0.1', 'localhost', '127.0.0.1:8000', 'localhost:8000',]
 
 
 # Application definition
@@ -39,7 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'disqus',
 ]
+
+DISQUS_API_KEY = 'BljXzdqZhONMNeWbwJpvlO2PEkUqaIMUuAIsGZyffIeW8W2ogjZs29Or4dIiHHUj'
+DISQUS_WEBSITE_SHORTNAME = 'vmak'
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

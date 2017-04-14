@@ -6,5 +6,7 @@
 	<h6>on {{post.date}}</h6>
 	{{post.body|safe|linebreaks}}
 
-
+{% load disqus_tags %}
+{% disqus_dev %}
+{% disqus_show_comments %}
 {% endblock %}
